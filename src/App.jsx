@@ -476,7 +476,7 @@ function App() {
               onClick={handleStartSurvey}
               onTouchEnd={handleStartSurvey}
             >
-              무료로 시작하기
+              시작하기
             </button>
           </div>
         </section>

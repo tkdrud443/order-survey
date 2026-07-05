@@ -240,11 +240,22 @@ function App() {
       japandi: 0,
       industrial: 0,
     });
+
+
     setHistory([]);
     setMultiSelected([]);
     setCustomInput("");
     resetCustomerInfo();
   };
+
+  const handleStartSurvey = (e) => {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  startSurvey();
+};
 
   const selectOption = (option, customValue = "") => {
     const nextScores = { ...scores };
@@ -459,8 +470,13 @@ function App() {
               <span>무료 진단</span>
             </div>
 
-            <button type="button" className="primary-btn" onClick={startSurvey}>
-            무료로 시작하기
+            <button
+              type="button"
+              className="primary-btn start-btn"
+              onClick={handleStartSurvey}
+              onTouchEnd={handleStartSurvey}
+            >
+              무료로 시작하기
             </button>
           </div>
         </section>

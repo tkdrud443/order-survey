@@ -1059,3 +1059,32 @@ main {
     font-size: 15px;
   }
 }
+
+/* 모바일 버튼 터치 안 되는 문제 해결 */
+
+.home,
+.hero-card {
+  position: relative;
+}
+
+.hero-card {
+  z-index: 1;
+}
+
+.home::before,
+.home::after,
+.hero-card::before,
+.hero-card::after {
+  pointer-events: none;
+}
+
+.primary-btn,
+.ghost-btn,
+.ghost-wide,
+.custom-submit-btn {
+  position: relative;
+  z-index: 30;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}

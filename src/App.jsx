@@ -576,7 +576,10 @@ function App() {
                     }}
                   >
                     <div className="visual photo-visual">
-                      <img src={option.image} alt={option.title} />
+                      <img
+                      src={`${import.meta.env.BASE_URL}${option.image.replace(/^\//, "")}`}
+                      alt={option.title}
+/>
                       <span>{option.label}</span>
                     </div>
 

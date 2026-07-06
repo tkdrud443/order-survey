@@ -159,7 +159,7 @@ const questions = [
         label: "Consult",
         title: "상담 후 결정",
         desc: "가구 디자인과 용도에 맞춰 상담 후 결정",
-        image: "/images/q4-4.jpg",
+        image: "/images/q4-4.png",
         score: { natural: 1, modern: 1, japandi: 1, industrial: 1 },
       },
     ],

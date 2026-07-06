@@ -35,7 +35,7 @@ const questions = [
       score: { natural: 1, modern: 1, japandi: 0, industrial: 3 },
     },
   ],
-},,
+},
   {
     id: 2,
     title: "선호하는 원목 색상은?",

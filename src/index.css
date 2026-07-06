@@ -1132,3 +1132,59 @@ main {
     cursor: pointer;
   }
 }
+
+
+/* Q1 4개 선택지 정렬 */
+
+.four-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.four-grid .option-card {
+  border-radius: 20px;
+}
+
+.four-grid .visual {
+  height: 180px;
+  padding: 14px;
+  font-size: 17px;
+}
+
+.four-grid .option-content {
+  padding: 16px;
+}
+
+.four-grid .option-content strong {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.four-grid .option-content p {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+@media (max-width: 760px) {
+  .four-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .four-grid .visual {
+    height: 130px;
+    font-size: 14px;
+  }
+
+  .four-grid .option-content {
+    padding: 12px;
+  }
+
+  .four-grid .option-content strong {
+    font-size: 13px;
+  }
+
+  .four-grid .option-content p {
+    font-size: 11px;
+  }
+}

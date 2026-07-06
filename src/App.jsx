@@ -527,14 +527,16 @@ function App() {
 
             <div
               className={
-                questions[current].multi
-                  ? "option-grid multi-grid"
-                  : [2, 4].includes(questions[current].id)
-                  ? "option-grid three-grid"
-                  : questions[current].layout === "compact"
-                  ? "option-grid compact-grid"
-                  : "option-grid"
-              }
+  questions[current].multi
+    ? "option-grid multi-grid"
+    : questions[current].id === 1
+    ? "option-grid four-grid"
+    : [2, 4].includes(questions[current].id)
+    ? "option-grid three-grid"
+    : questions[current].layout === "compact"
+    ? "option-grid compact-grid"
+    : "option-grid"
+}
             >
               {questions[current].options.map((option) => {
                 if (option.type === "text") {

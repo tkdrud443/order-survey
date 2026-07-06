@@ -43,14 +43,14 @@ const questions = [
     options: [
       {
         label: "Oak",
-        title: "밝은 오크",
+        title: "밝은 오크류",
         desc: "화사하고 넓어 보이는 따뜻한 컬러",
         image: "/images/q2-1.jpg",
         score: { natural: 3, modern: 0, japandi: 2, industrial: 0 },
       },
       {
         label: "Walnut",
-        title: "진한 월넛",
+        title: "진한 월넛류",
         desc: "고급스럽고 묵직한 분위기의 컬러",
         image: "/images/q2-2.jpg",
         score: { natural: 0, modern: 2, japandi: 1, industrial: 2 },

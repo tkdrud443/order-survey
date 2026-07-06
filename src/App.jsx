@@ -108,8 +108,64 @@ const questions = [
       },
     ],
   },
-  {
+    {
     id: 4,
+    title: "선호하는 손잡이 형태는?",
+    subtitle: "가구 분위기와 사용 방식에 어울리는 손잡이 형태를 선택해주세요.",
+    options: [
+      {
+        label: "Push",
+        title: "무손잡이 / 푸쉬형",
+        desc: "겉으로 손잡이가 보이지 않아 깔끔한 형태",
+        image: "/images/q4-10.jpg",
+        score: { natural: 0, modern: 3, japandi: 2, industrial: 0 },
+      },
+      {
+        label: "Groove",
+        title: "매립 손잡이 / 사선 손잡이",
+        desc: "문 안쪽이나 홈을 파서 손을 넣는 심플한 방식",
+        image: "/images/q4-11.jpg",
+        score: { natural: 1, modern: 3, japandi: 2, industrial: 0 },
+      },
+      {
+        label: "Line",
+        title: "라인 손잡이",
+        desc: "길게 이어지는 얇은 라인 형태의 손잡이",
+        image: "/images/q4-20.png",
+        score: { natural: 0, modern: 3, japandi: 1, industrial: 1 },
+      },
+      {
+        label: "Knob",
+        title: "원형 노브",
+        desc: "작고 귀여운 포인트가 되는 손잡이",
+        image: "/images/q4-311.png",
+        score: { natural: 3, modern: 0, japandi: 1, industrial: 0 },
+      },
+      {
+        label: "Bar",
+        title: "바 손잡이",
+        desc: "잡기 편하고 안정감 있는 긴 손잡이",
+        image: "/images/q4-5.png",
+        score: { natural: 1, modern: 2, japandi: 0, industrial: 2 },
+      },
+      {
+        label: "Leather",
+        title: "가죽 손잡이",
+        desc: "부드럽고 감성적인 포인트를 주는 형태",
+        image: "/images/q4-55.png",
+        score: { natural: 3, modern: 0, japandi: 2, industrial: 1 },
+      },
+      {
+        label: "Consult",
+        title: "상담 후 결정",
+        desc: "가구 디자인과 용도에 맞춰 상담 후 결정",
+        image: "/images/q4-handle-7.jpg",
+        score: { natural: 1, modern: 1, japandi: 1, industrial: 1 },
+      },
+    ],
+  },
+  {
+    id: 5,
     title: "원하는 자재는 어떤 건가요?",
     subtitle: "활용도에 따라 자재를 선택해주세요. 상황에 따라 상담 후 변경될 수 있습니다.",
     options: [
@@ -128,7 +184,7 @@ const questions = [
         score: { natural: 0, modern: 2, japandi: 0, industrial: 3 },
       },
       {
-        label: "상담 후 결정",
+        label: "Consult",
         title: "상담 후 결정",
         desc: "전문가 상담 후 상황에 맞게 결정",
         image: "/images/q4-4.png",
@@ -137,7 +193,7 @@ const questions = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     multi: true,
     ranking: true,
     title: "가구를 고를 때 중요하게 생각하는 순위는?",
@@ -503,7 +559,7 @@ return (
             </p>
 
             <div className="hero-info">
-              <span>약 1분 소요</span>
+              <span>약 3분 소요</span>
               <span>사진 선택형</span>
               <span>무료 진단</span>
             </div>
@@ -560,7 +616,9 @@ return (
     ? "option-grid multi-grid"
     : questions[current].id === 1
     ? "option-grid four-grid"
-    : [2, 4].includes(questions[current].id)
+    : questions[current].id === 4
+    ? "option-grid handle-grid"
+    : [2, 5].includes(questions[current].id)
     ? "option-grid three-grid"
     : questions[current].layout === "compact"
     ? "option-grid compact-grid"

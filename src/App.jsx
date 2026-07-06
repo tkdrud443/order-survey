@@ -2,26 +2,40 @@ import { useMemo, useState } from "react";
 
 const questions = [
   {
-    id: 1,
-    title: "어떤 공간 분위기가 더 마음에 드시나요?",
-    subtitle: "첫인상으로 가장 끌리는 이미지를 선택해주세요.",
-    options: [
-      {
-        label: "Fancy",
-        title: "화려 / 입체감",
-        desc: "하나뿐인 디자인, 올록볼록, 포인트",
-        image: "/images/q1-1.png",
-        score: { natural: 3, modern: 0, japandi: 1, industrial: 0 },
-      },
-      {
-        label: "Modern",
-        title: "깔끔 / 세련",
-        desc: "깔끔한 선맞춤, 차분한 톤, 세련된 분위기",
-        image: "/images/q1-2.png",
-        score: { natural: 0, modern: 3, japandi: 1, industrial: 0 },
-      },
-    ],
-  },
+  id: 1,
+  title: "어떤 공간 분위기가 더 마음에 드시나요?",
+  subtitle: "첫인상으로 가장 끌리는 이미지를 선택해주세요.",
+  options: [
+    {
+      label: "Fancy",
+      title: "화려 / 입체감",
+      desc: "하나뿐인 디자인, 올록볼록, 포인트",
+      image: "/images/q1-1.png",
+      score: { natural: 3, modern: 0, japandi: 1, industrial: 0 },
+    },
+    {
+      label: "Neat",
+      title: "깔끔 / 세련",
+      desc: "깔끔한 선맞춤, 차분한 톤, 세련된 분위기",
+      image: "/images/q1-2.png",
+      score: { natural: 0, modern: 3, japandi: 1, industrial: 0 },
+    },
+    {
+      label: "Antique",
+      title: "앤틱 / 옛스러움",
+      desc: "편안하고 옛스러운 원목 분위기",
+      image: "/images/q1-3.jpg",
+      score: { natural: 3, modern: 0, japandi: 2, industrial: 0 },
+    },
+    {
+      label: "Modern",
+      title: "현대 / 차가움",
+      desc: "현대적이고 불필요하지않은 디자인",
+      image: "/images/q1-4.png",
+      score: { natural: 1, modern: 1, japandi: 0, industrial: 3 },
+    },
+  ],
+},,
   {
     id: 2,
     title: "선호하는 원목 색상은?",

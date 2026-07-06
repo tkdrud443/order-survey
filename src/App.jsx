@@ -503,7 +503,7 @@ return (
             </p>
 
             <div className="hero-info">
-              <span>약 2분 소요</span>
+              <span>약 1분 소요</span>
               <span>사진 선택형</span>
               <span>무료 진단</span>
             </div>
@@ -516,6 +516,11 @@ return (
             >
               시작하기
             </button>
+
+            <div className="hero-footer-note">
+           <p>대표목수 김광열</p>
+           <p>작업장 주소: 경기도 부천시 소사구 양지로237 611호</p>
+            </div>
           </div>
         </section>
       )}

@@ -458,7 +458,31 @@ function App() {
     }
   };
 
+  const currentQuestion = questions[current];
+ 
+if (step === "survey" && !currentQuestion) {
   return (
+    <div className="app">
+      <main className="survey-shell">
+        <section className="question-card">
+          <h2>질문을 불러오는 중 오류가 발생했습니다.</h2>
+          <button
+            type="button"
+            className="primary-btn"
+            onClick={() => {
+              setCurrent(0);
+              setStep("home");
+            }}
+          >
+            처음으로 돌아가기
+          </button>
+        </section>
+      </main>
+    </div>
+  );
+}
+
+return (
     <main>
       {step === "home" && (
         <section className="home">
